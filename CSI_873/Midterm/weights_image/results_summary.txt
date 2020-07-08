@@ -1,0 +1,22 @@
+Cont:   w_delta: 0.181343   accuracy: 0.124067   iter:      0
+Cont:   w_delta: 0.047466   accuracy: 0.651663   iter:   2000
+Cont:   w_delta: 0.135907   accuracy: 0.810811   iter:   4000
+Cont:   w_delta: 0.037506   accuracy: 0.798411   iter:   6000
+Cont:   w_delta: 0.103147   accuracy: 0.857426   iter:   8000
+Cont:   w_delta: 0.215168   accuracy: 0.862487   iter:  10000
+Cont:   w_delta: 0.167753   accuracy: 0.865049   iter:  12000
+Cont:   w_delta: 0.095642   accuracy: 0.838364   iter:  14000
+Cont:   w_delta: 0.045059   accuracy: 0.871720   iter:  16000
+Cont:   w_delta: 0.460674   accuracy: 0.857143   iter:  18000
+Cont:   w_delta: 0.002955   accuracy: 0.876506   iter:  20000
+
+[96, 0, 0, 0, 0, 0, 1, 0, 0, 0]
+[0, 115, 1, 0, 0, 0, 0, 0, 2, 0]
+[4, 1, 76, 1, 1, 0, 1, 0, 2, 0]
+[1, 0, 8, 81, 0, 6, 0, 1, 6, 1]
+[4, 0, 0, 0, 71, 0, 1, 1, 1, 28]
+[3, 0, 0, 7, 0, 63, 3, 1, 9, 1]
+[3, 0, 2, 0, 1, 1, 83, 0, 0, 0]
+[1, 4, 2, 0, 0, 0, 0, 92, 1, 0]
+[1, 0, 4, 0, 1, 0, 2, 0, 88, 1]
+[3, 0, 0, 1, 2, 2, 1, 2, 2, 85]

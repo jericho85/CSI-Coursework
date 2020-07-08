@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: Lab 6 Bibliography.aux
+The style file: plain.bst
+Database file #1: Lab6.bib
+I was expecting a `,' or a `}'---line 5 of file Lab6.bib
+ :  
+ :  year={1961}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--empty publisher in Rogers61
+Warning--empty year in Rogers61
+You've used 3 entries,
+            2118 wiz_defined-function locations,
+            517 strings with 4345 characters,
+and the built_in function-call counts, 883 in all, are:
+= -- 87
+> -- 21
+< -- 1
++ -- 11
+- -- 6
+* -- 54
+:= -- 145
+add.period$ -- 8
+call.type$ -- 3
+change.case$ -- 11
+chr.to.int$ -- 0
+cite$ -- 5
+duplicate$ -- 41
+empty$ -- 79
+format.name$ -- 6
+if$ -- 185
+int.to.chr$ -- 0
+int.to.str$ -- 3
+missing$ -- 4
+newline$ -- 17
+num.names$ -- 6
+pop$ -- 17
+preamble$ -- 1
+purify$ -- 9
+quote$ -- 0
+skip$ -- 28
+stack$ -- 0
+substring$ -- 66
+swap$ -- 10
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 10
+warning$ -- 2
+while$ -- 11
+width$ -- 4
+write$ -- 31
+(There was 1 error message)

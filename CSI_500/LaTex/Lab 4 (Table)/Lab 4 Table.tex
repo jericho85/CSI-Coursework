@@ -1,0 +1,65 @@
+%Table Example 
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+
+%opening
+\title{Lab 4 - LaTex Tables}
+\author{Jericho McLeod}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+In this lab, we use LatTex to create tables.
+\end{abstract}
+
+\section{Using Tables}
+In this section, we show various examples of tables.
+
+\subsection{US Airports Example}
+In this subsection, we use data from Wikipedia to create a table of the top 4 busiest US Airports.
+
+
+\begin{tabular}{|c|c|c|}
+	\hline 
+	Name & City & IACO Code \\ 
+	\hline 
+	Hartsfield-Jackson International & Atlanta & ATL \\ 
+	\hline 
+	Los Angeles International & Los Angeles & LAX \\ 
+	\hline 
+	O'Hare International & Chicago & ORD \\ 
+	\hline 
+	Dallas/Ft Worth International & Dallas & DFW \\ 
+	\hline 
+\end{tabular} 
+
+\subsection{Canadian Provinces Example}
+This example provides a captioned table listing the provinces of Canada.
+See table \ref{tbl:CanProv}
+
+\begin{table}[!th]
+\begin{tabular}{|l|l|r|}
+	\hline
+	Province 			& Capital 			& Population (2016) \\
+	\hline
+	Ontario 			& Toronto 			& 13,448,495\\
+	Quebec 				& Quebec City 	& 8,164,361\\
+	Nova Scotia 	& Halifax 				& 923,598\\
+	New Bunswick & Fredericton 		& 747,101\\
+	Manitoba 			& Winnipeg 		& 1,278,365\\
+	British Columbia & Victoria 		& 4,648,055\\
+	Saskatchewan 	& Charlottetown & 142,907\\
+	Alberta 			& Regina 				& 1,098,352\\
+	Newfoundland and Labrador & St. Johns & 519,716\\
+	\hline
+
+	
+	
+\end{tabular}
+\caption{Canadian Provinces, Capitals, and 2016 Population}
+\label{tbl:CanProv}
+\end{table}
+
+\end{document}

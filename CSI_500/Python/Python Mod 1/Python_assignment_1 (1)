@@ -1,0 +1,177 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+'''
+CSI500, Python Assignment 1
+
+Jericho McLeod
+
+Problem 1: Please note that the section dividers are applicable in Spyder, the
+IDE included with Anaconda. If the code sections are run in other IDEs the
+output may not format correctly.
+
+Also note that Spyder's code analysis will highly redundant library imports and
+function definitions: these were included so that the individual sections could
+be run in any order.
+
+
+The original model assumed that the Earth and Mars orbitted the sun in the
+same amount of time. This model assumes that the orbits vary in time, but still
+does not account for variations in the location on the surface of either,
+variations in the orbits themselves, or a myriad number of other possible
+factors. It is, however, a great deal closer to what would be observed in
+reality for a minimal additional cost.
+
+Using this model, the 0, 90, and 180 degree points for Earth and Mars, relative
+to the sun, generate the following output:
+
+    0 Degrees:
+The Earth and Mars are 78300000.00 kilometers apart and it
+takes 261.17 seconds for a signal from Mars to reach Earth.
+
+    90 Degrees:
+The Earth and Mars are 272614324.64 kilometers apart and it
+takes 909.32 seconds for a signal from Mars to reach Earth.
+    
+    180 Degrees:
+The Earth and Mars are 377500000.00 kilometers apart and it
+takes 1259.17 seconds for a signal from Mars to reach Earth.
+'''
+
+import math
+import sys
+
+def printf(format,*args):
+    sys.stdout.write(format % args)
+    
+
+earth_dist = 149600000 #kilometers
+mars_dist = 227900000 #kilometers
+c = 299800 #kilometers per second
+
+def cal_dist(angle):
+    angle_rad = math.radians(angle)
+    cos_angle = math.cos(angle_rad)
+    a2b2 = (earth_dist**2 + mars_dist**2)
+    abcosgamma2 = (2 * earth_dist * mars_dist * cos_angle)
+    base = (a2b2-abcosgamma2)**.5
+    return(base)
+    
+def cal_time(distance):
+    time = distance / c
+    return(time)
+
+def create_output(input_):
+    distance = cal_dist(input_)
+    time = cal_time(distance)
+    printf('The Earth and Mars are %9.2f kilometers apart and it\n'\
+           +'takes %4.2f seconds for a signal from Mars to reach Earth.\n \n', \
+           distance,time)
+
+def create_range_output():
+    for i in range(0,36):
+        angle=i*10
+        printf('When the angle between Earth and Mars is %d degrees:\n', angle)
+        create_output(angle)
+
+user_input= input('Input an angle between Earth and Mars, relative to the Sun,\n'\
+                  +'as a number between 0 and 360, or input "test" for a\n'\
+                  +'range of angles, to receive the distance and timing \n'\
+                  +'for transmissions sent to Mars from Earth:\n\nInput: ')
+
+if user_input == 'test': 
+    print()
+    create_range_output()
+else:
+    error = '\nError: the input you provided is invalid.'
+    try:
+        if float(user_input) >=0 and float(user_input) <=360: 
+            create_output(float(user_input))
+        else: print(error)
+    except:
+        print(error)
+
+        
+#%%
+
+'''
+Problem 2: Rothko Color formatting
+
+Orange is typically 60/40 red and green, so the orange Rothko used is a bit 
+more bluish in hue, more similar to a color such as coral.
+
+The yellow he used is fairly close to a yellow or light yellow, 
+but with a bit less green than would be expected for a color labeled yellow.
+
+Overall, he seems to have used slightly cooler versions of orange and yellow 
+as the pigments combine to form more complex colors.
+
+Table values: (Altered to HTML rather than RGB values as this was the output from the site)
+    Color:      HTML Code:      Red %:      Green %:    Blue %:
+    Orange      F16F33          59.8%       27.4%       12.7% 
+    Yellow      FACA3A          49%         39.6%       11.4%
+'''
+
+#%%
+
+'''Problem 3: String formatting'''
+
+import sys
+
+def printf(format,*args):
+    sys.stdout.write(format % args)
+
+string1 = 'spam' #declare variable with string 'spam'
+
+string2 = string1+string1+string1+string1 # declare variable with spam 4 times
+
+string3 = string1+' '+string1+' '+string1+' '+string1 #adding spaces with no new code
+
+print((string1+' ')*4) #repeating string with multiplier rather than manually
+print()
+
+print(string1.upper()) #printing upper case string
+print()
+
+printf('%38s',string1) #center string in 72 character space
+print()
+
+#%%
+
+'''Problem 4: List Processing'''
+
+menu = ['Spam','Eggs','Bacon','Ham','Muffin'] #declaring list variable
+print(menu,'\n')
+
+menu.sort() #sorting list variable
+print(menu,'\n')
+
+for i in menu: #loop to print on multiple lines
+    print(i)
+    
+#%%
+    
+'''Problem 5: Formatted Printing'''
+
+import sys
+
+def printf(format,*args):
+    sys.stdout.write(format % args)
+
+'''The output of this section is:
+    the value of pi is 3.141592654 and the value of e is 2.718281828
+'''
+pi_val = 3.141592654
+e_val = 2.718281828
+print('the value of pi is ' + str(pi_val) + ' and the value of e is ' + str(e_val))
+print()
+
+'''The output of this section is:
+    the value of pi is   3.1416, and the value of e is   2.7183
+'''
+printf('the value of pi is %8.4f, and the value of e is %8.4f', pi_val, e_val )
+print()
+
+'''The output of this section is:
+    the value of pi is   3.1416, and the value of e is   2.7183
+This is notably identical to the simplified formatting function's output.'''
+print('the value of pi is {0:8.4f}, and the value of e is {1:8.4f}'.format(pi_val, e_val) )

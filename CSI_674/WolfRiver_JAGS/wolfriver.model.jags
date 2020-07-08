@@ -1,0 +1,10 @@
+model {
+	for(i in 1:n) {
+		x[i]~dnorm(theta,rho)  # mean theta precision rho
+	}
+	prec = 1/1.5^2           # JAGS uses precision in dnorm instead of st deviation
+	theta~dnorm(6,prec)      # mean 6, stdv 1.5
+  rate = 1/0.19            # JAGS uses rate in dgamma instead of scale
+	rho~dgamma(4.5,rate)     # shape 4.5, scale 0.19
+}
+

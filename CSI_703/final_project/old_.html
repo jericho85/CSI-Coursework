@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+
+
+</style>
+<h1>Test</h1>
+<body>
+<b>Trial page</b> <br><br>
+Things to do:<br>
+1: CSS to prettify page<br>
+2: Read edges in from JSON, color by strength <br>
+3: tool tip for mouseover showing name of deck <br>
+4: Sidebar or bottom segment for decklist <br>
+5: when deck is selected, fade non-linked decks and edges by 80% <br>
+6: then create multiple pages for filtered data by price / type<br>
+7: transition clicks for color fades <br>
+8: write narrative for page <br>
+
+</body>
+
+
+<script src="d3.js"></script>
+
+<script>
+
+    
+var data = d3.json('data_all.json',function(error, data){
+    var nodeData = data["nodes"]
+    var linkData = data["links"]
+    //console.log(data["nodes"])
+    //console.log(nodeData)
+    //console.log(linkData)
+
+    // source (deck name)
+    // target (deck name)
+    // value (float between 0 and 1)
+
+    var width = 1200,
+        height = 850,
+        radius = 10,
+        x0 = width/2 +75,
+        y0 = height/2,
+        r = 400
+
+
+
+    var svg = d3.select("body").append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+    var deckNames = ["4-c Control","Affinity","Antiquities War","Arclight Phoenix",
+                    "Belcher","Bomberman","BUG Midrange","Burn","Canadian Threshold",
+                    "Cloudpost Ramp","Dark Depths","Death and taxes","Death's Shadow",
+                    "Delver (Other)","Doomsday","Dragon Stompy","Dredge",
+                    "Eldrazi Aggro","Elves","Food Chain","Goblins","Grixis Control",
+                    "Grixis Delver","Humans","Infect","Junk","Lands",
+                    "Legacy Landstill","LOAM","Maverick","Merfolk","MUD","Nic Fit",
+                    "Painter","Pikula","Reanimator","Slivers","Sneak & Show",
+                    "Stoneblade","Storm","UR Delver","UWx Control","Zombie Bombardment"]
+
+    var decksJSON = []
+    var circlesData = []
+
+    //for(var i=0; i<nodeData.length; i++) {
+    //    //console.log(nodeData[i]["id"])
+    //    var deck_name = nodeData[i][0]
+    //    var deck_type = nodeData[i][1]
+    //}
+
+    for(var i = 0; i < deckNames.length; i++) {
+            var x = x0 + r * Math.cos(2 * Math.PI * i / deckNames.length);
+            var y = y0 + r * Math.sin(2 * Math.PI * i /deckNames.length);
+            //console.log(x,y)   
+            //var deckName = deckNames[i]
+            var deckName = nodeData[i]["id"]
+            var deckType = nodeData[i]["group"]
+            decksJSON.push({
+                id:deckName,
+                group:deckType,
+                x_value : x,
+                y_value : y,
+                rad : radius,
+                color : "blue"
+            })
+            //createNode(deckName,x,y,radius);
+            circlesData.push([deckName,x,y,radius])
+        };
+
+
+    for (var i=0; i<linkData.length; i++){
+        var deck1 = linkData[i]["source"]
+        var deck2 = linkData[i]["target"]
+        var strength = linkData[i]["value"]
+        var colorNum = create_color(strength)
+        var color = d3.rgb(x,x,x)
+        var deck1Stats = get_coord(deck1)
+        //console.log(deck1Stats)
+        var deck2Stats = get_coord(deck2)
+        //console.log(deck2Stats)
+        var x1 = deck1Stats[0]
+        var x2 = deck2Stats[0]
+        var y1 = deck1Stats[1]
+        var y2 = deck2Stats[1]
+        //console.log(x1,x2,y1,y2)
+        createEdge(x1,y1,x2,y2,color)
+
+        }
+
+    for (var i=0; i<decksJSON.length; i++) {
+        var deckname = decksJSON[i]["id"]
+        var x = decksJSON[i]["x_value"]
+        var y = decksJSON[i]["y_value"]
+        //console.log(deckname,x,y)
+        var rad = 10
+        createNode(deckname,x,y,rad)
+    }
+
+    //var tooltip = d3.select("body")
+    //    .append("div")
+    //    .style("position", "absolute")
+    //    .style("z-index", "10")
+    //    .style("visibility", "hidden")
+    //    .text("a simple tooltip")
+
+    //console.log(decksJSON)
+    //var card_data = []
+    //d3.csv("card_data_t.csv",function(data) {
+    //    for (i=0; i<data.length; i++){
+    //        console.log("print")
+    //    }
+    //    //console.log(data)
+    //})
+
+    
+    function getDecklist(name) {
+        var deckList = []
+        d3.csv("cards_by_deck.csv",function(data) {
+            for (i=0; i<data.length; i++) {
+                if (data[i][name] > 0) {
+                    var quant = data[i][name]
+                    var card = data[i]["Card Name"]
+                    var temp_string = [quant,card]
+                    deckList.push(temp_string)
+                }
+            }
+        })
+        return(deckList)
+    }
+
+
+
+    function tooltip(text,x,y,r) {
+        svg.append("rect")
+            .attr("x",x+20)
+            .attr("y",y-(r/2)-10)
+            .attr("width",185)
+            .attr("height",30)
+            .style("fill","#faf9f4")
+            .attr("id","tipbox")
+        svg.append("text")
+            .attr("x",x+22)
+            .attr("y",y-(r/2)+10)
+            .attr("id","tiptext")
+            .style("font-size","18px")
+            .text(text)
+    }
+
+    function cleartip() {
+        svg.select("#tipbox").remove()
+        svg.select("#tiptext").remove()
+    }
+
+    function sidebar(deck) {
+        svg.append("rect")
+            .attr("x",10)
+            .attr("y",10)
+            .attr("width",250)
+            .attr("height",height-20)
+            .style("fill","#faf9f4")
+            .attr("id","sideBar")
+            .attr("stroke","black")
+            .attr("strock-width",3);
+        deckList = getDecklist(deck)
+        console.log(deckList)
+    }
+    
+
+    function createNode(name,x,y,r){
+        var nodeCircle = svg.append("circle")
+                        .attr("cx",x)
+                        .attr("cy",y)
+                        .attr("r",r)
+                        .attr("id",name)
+                        //.on("mouseover",function(d){console.log("Mouse over detected "+name)})
+                        //.on("mouseout",function(d){console.log("Mouse out detected "+name )})
+                        //.on("mouseover", function(){return tooltip.style("visibility", "visible");})
+	                    //.on("mousemove", function(){return tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px");})
+	                    //.on("mouseout", function(){return tooltip.style("visibility", "hidden");})
+                        .on("mouseover",function(d){tooltip(name,x,y,r)})
+                        .on("mouseout",function(d){cleartip()})
+                        .on("click",function(d){sidebar(name)})
+                        //.on("click",function(d){console.log("You clicked "+name)})
+        //console.log(nodeCircle)      
+    }
+
+    function createEdge(x1,y1,x2,y2,color) {
+        var nodeEdge = svg.append("line")
+                        .attr("x1",x1)
+                        .attr("x2",x2)
+                        .attr("y1",y1)
+                        .attr("y2",y2)
+                        .attr("stroke-width",1)
+                        //.attr("stroke",color)
+                        .attr("stroke","black")
+    }
+
+    function create_color(x) {
+        //console.log(x)
+        x = Math.sqrt(x)
+        y = Math.floor(Math.abs((x * 255)-255))
+        return(y)
+    }
+
+
+    function get_coord(deckname) {
+        for (var i=0; i<decksJSON.length; i++) { 
+            if (decksJSON[i]["id"] === deckname) {
+                var x_value = decksJSON[i]["x_value"]
+                var y_value = decksJSON[i]["y_value"]
+            }
+            var tup = [x_value,y_value]
+        }
+        return(tup)
+    }
+
+    //var color = .5
+    //var color2 = create_color(color)
+    //console.log(color2)
+    //console.log(circlesData[0])
+
+    //for (var i=0; i<circlesData.length; i++) {
+    //    for ( var j=0; j<circlesData.length; j++) {
+    //        if (j==i+8) {
+    //            list_ = [i,j]
+    //            //console.log(list_)
+    //            x1 = circlesData[i][1]
+    //            y1 = circlesData[i][2]
+    //            x2 = circlesData[j][1]
+    //            y2 = circlesData[j][2]
+    //            createEdge(x1,y1,x2,y2)
+    //            //console.log(x1,y1,x2,y2)
+    //        }
+    //        
+    //    }
+    //}
+
+
+
+
+
+//console.log(svg.selectAll("circle"))
+
+})
+
+</script>
+

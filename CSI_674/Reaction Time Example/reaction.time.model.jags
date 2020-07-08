@@ -1,0 +1,8 @@
+model {
+	for(i in 1:n) {
+		reaction.times[i]~dnorm(theta,rho)  # mean theta precision rho
+	}
+	theta~dnorm(6,1)        # mean 6 precision 1
+	rho~dgamma(1,1/25)      # shape 1 rate (inverse scale) 1/25
+}
+

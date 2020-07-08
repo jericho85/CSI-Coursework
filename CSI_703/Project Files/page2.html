@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+        <link rel="stylesheet" href="styles.css">
+</head>
+<h1>Data</h1>
+<body>
+  Exploring data manipulations <br>
+  <button onclick="window.location.href = 'data_all.html';">Show Graphs</button> <br>
+  <button onclick="show_all()">Show All</button>
+  <button onclick="land_table()">Land</button>
+  <button onclick="creature_table()">Creature</button>
+  <button onclick="enchantment_table()">Enchantment</button>
+  <button onclick="instant_table()">Instant</button>
+  <button onclick="planeswalker_table()">Planeswalker</button>
+  <button onclick="sorcery_table()">Sorcery</button>
+  <button onclick="artifact_table()">Artifact</button>
+
+  <br><br>
+
+  <table id="cardTable">
+        <thead>
+            <tr>
+            <th>Card Name</th>
+            <th>Card Type</th> 
+            <th>Card Price</th>
+            </tr>
+        </thead>
+        <tbody id="cardTableBody">
+
+        </tbody>        
+  </table>
+</body>
+
+<!--<svg width="1200" height="900"></svg>-->
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+
+d3.csv("card_data.csv", function(data) {
+    console.log(data);
+
+    for (var i =0; i < data.length; i++) {
+        var table = document.getElementById("cardTableBody");
+        var newRow = table.insertRow(-1);
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+        var cell3 = newRow.insertCell(2);
+        cell1.innerHTML = data[i].Name;
+        cell2.innerHTML = data[i].Type;
+        cell3.innerHTML = data[i].Price
+    }
+});
+
+function land_table() {
+    var table = document.getElementById("cardTableBody");
+    table.innerHTML = "";
+
+    d3.csv("card_data.csv", function(data) {
+    for (var i =0; i < data.length; i++) {
+        if (data[i].Land == 1) {
+            var table = document.getElementById("cardTableBody");
+            var newRow = table.insertRow(-1);
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+            cell1.innerHTML = data[i].Name;
+            cell2.innerHTML = data[i].Type;
+            cell3.innerHTML = data[i].Price
+        }
+    }
+})};
+
+function creature_table() {
+    var table = document.getElementById("cardTableBody");
+    table.innerHTML = "";
+
+    d3.csv("card_data.csv", function(data) {
+    for (var i =0; i < data.length; i++) {
+        if (data[i].Creature == 1) {
+            var table = document.getElementById("cardTableBody");
+            var newRow = table.insertRow(-1);
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+            cell1.innerHTML = data[i].Name;
+            cell2.innerHTML = data[i].Type;
+            cell3.innerHTML = data[i].Price
+        }
+    }
+})};
+
+function enchantment_table() {
+    var table = document.getElementById("cardTableBody");
+    table.innerHTML = "";
+
+    d3.csv("card_data.csv", function(data) {
+    for (var i =0; i < data.length; i++) {
+        if (data[i].Enchantment == 1) {
+            var table = document.getElementById("cardTableBody");
+            var newRow = table.insertRow(-1);
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+            cell1.innerHTML = data[i].Name;
+            cell2.innerHTML = data[i].Type;
+            cell3.innerHTML = data[i].Price
+        }
+    }}
+    )
+};
+
+function planeswalker_table() {
+    var table = document.getElementById("cardTableBody");
+    table.innerHTML = "";
+
+    d3.csv("card_data.csv", function(data) {
+    for (var i =0; i < data.length; i++) {
+        if (data[i].Planeswalker == 1) {
+            var table = document.getElementById("cardTableBody");
+            var newRow = table.insertRow(-1);
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+            cell1.innerHTML = data[i].Name;
+            cell2.innerHTML = data[i].Type;
+            cell3.innerHTML = data[i].Price
+        }
+    }}
+    )
+};
+
+
+function instant_table() {
+    var table = document.getElementById("cardTableBody");
+    table.innerHTML = "";
+
+    d3.csv("card_data.csv", function(data) {
+    for (var i =0; i < data.length; i++) {
+        if (data[i].Instant == 1) {
+            var table = document.getElementById("cardTableBody");
+            var newRow = table.insertRow(-1);
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+            cell1.innerHTML = data[i].Name;
+            cell2.innerHTML = data[i].Type;
+            cell3.innerHTML = data[i].Price
+        }
+    }}
+    )
+};
+
+function sorcery_table() {
+    var table = document.getElementById("cardTableBody");
+    table.innerHTML = "";
+
+    d3.csv("card_data.csv", function(data) {
+    for (var i =0; i < data.length; i++) {
+        if (data[i].Sorcery == 1) {
+            var table = document.getElementById("cardTableBody");
+            var newRow = table.insertRow(-1);
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+            cell1.innerHTML = data[i].Name;
+            cell2.innerHTML = data[i].Type;
+            cell3.innerHTML = data[i].Price
+        }
+    }}
+    )
+};
+
+function artifact_table() {
+    var table = document.getElementById("cardTableBody");
+    table.innerHTML = "";
+
+    d3.csv("card_data.csv", function(data) {
+    for (var i =0; i < data.length; i++) {
+        if (data[i].Artifact == 1) {
+            var table = document.getElementById("cardTableBody");
+            var newRow = table.insertRow(-1);
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+            cell1.innerHTML = data[i].Name;
+            cell2.innerHTML = data[i].Type;
+            cell3.innerHTML = data[i].Price
+        }
+    }}
+    )
+};
+
+function show_all() {
+    var table = document.getElementById("cardTableBody");
+    table.innerHTML = "";
+    d3.csv("card_data.csv", function(data) {
+    console.log(data);
+
+    for (var i =0; i < data.length; i++) {
+        var table = document.getElementById("cardTableBody");
+        var newRow = table.insertRow(-1);
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+        var cell3 = newRow.insertCell(2);
+        cell1.innerHTML = data[i].Name;
+        cell2.innerHTML = data[i].Type;
+        cell3.innerHTML = data[i].Price
+    }
+});
+}
+
+
+//d3.csv("card_data.csv", function(data) {
+//    for (var i = 0; i < data.length; i++) {
+//        console.log(data[i].Name);
+//        console.log(data[i].Type);
+//    }
+//});
+
+
+</script>
+

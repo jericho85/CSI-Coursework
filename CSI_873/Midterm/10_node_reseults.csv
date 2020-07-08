@@ -1,0 +1,23 @@
+Nodes: 10  Iterations: 256   Accuracy: 0.142800
+Nodes: 10  Iterations: 512   Accuracy: 0.161400
+Nodes: 10  Iterations: 1024   Accuracy: 0.599700
+Nodes: 10  Iterations: 2048   Accuracy: 0.733300
+Nodes: 10  Iterations: 4096   Accuracy: 0.852800
+Nodes: 10  Iterations: 8192   Accuracy: 0.862800
+Nodes: 10  Iterations: 16384   Accuracy: 0.864500
+Nodes: 10  Iterations: 32768   Accuracy: 0.892900
+
+Hidden Nodes:,"[11, 6, 2, 3, 121, 11, 1, 42, 27, 785]"
+Accuracy:,0.8929
+Confusion Matrix:
+945,0,4,4,1,9,8,3,5,1
+0,1111,2,2,2,2,5,3,8,0
+14,3,915,18,16,5,17,9,35,0
+4,4,23,839,1,60,3,37,37,2
+2,1,4,0,936,0,19,2,8,10
+25,2,3,27,9,694,23,21,81,7
+31,4,13,0,12,7,873,0,18,0
+4,20,26,5,19,1,0,946,5,2
+6,10,10,17,7,11,17,10,885,1
+11,6,2,3,121,11,1,42,27,785
+

@@ -1,0 +1,18 @@
+0,1,2,3,4,5,6
+Deck A,Deck B,Different,Same,Jaccard,,
+Belcher,Bomberman,0.0,4.0,1.0,"{""source"": ""Belcher"", ""target"": ""Bomberman"", ""value"":1.0},","{""source"": ""Belcher"", ""target"": ""Bomberman"", ""value"":1.0},"
+Belcher,Doomsday,0.0,4.0,1.0,"{""source"": ""Belcher"", ""target"": ""Doomsday"", ""value"":1.0},","{""source"": ""Belcher"", ""target"": ""Doomsday"", ""value"":1.0},"
+Belcher,Dredge,2.0,2.0,0.5,"{""source"": ""Belcher"", ""target"": ""Dredge"", ""value"":0.5},","{""source"": ""Belcher"", ""target"": ""Dredge"", ""value"":0.25},"
+Belcher,Storm,0.0,4.0,1.0,"{""source"": ""Belcher"", ""target"": ""Storm"", ""value"":1.0},","{""source"": ""Belcher"", ""target"": ""Storm"", ""value"":1.0},"
+Bomberman,Doomsday,0.0,4.0,1.0,"{""source"": ""Bomberman"", ""target"": ""Doomsday"", ""value"":1.0},","{""source"": ""Bomberman"", ""target"": ""Doomsday"", ""value"":1.0},"
+Bomberman,Dredge,2.0,2.0,0.5,"{""source"": ""Bomberman"", ""target"": ""Dredge"", ""value"":0.5},","{""source"": ""Bomberman"", ""target"": ""Dredge"", ""value"":0.25},"
+Bomberman,Storm,0.0,4.0,1.0,"{""source"": ""Bomberman"", ""target"": ""Storm"", ""value"":1.0},","{""source"": ""Bomberman"", ""target"": ""Storm"", ""value"":1.0},"
+Cloudpost Ramp,Eldrazi Aggro,3.733333334,1.333333333,0.26315789465373957,"{""source"": ""Cloudpost Ramp"", ""target"": ""Eldrazi Aggro"", ""value"":0.26315789465373957},","{""source"": ""Cloudpost Ramp"", ""target"": ""Eldrazi Aggro"", ""value"":0.0692520775185887},"
+Cloudpost Ramp,MUD,5.333333334000001,1.333333333,0.19999999993999998,"{""source"": ""Cloudpost Ramp"", ""target"": ""MUD"", ""value"":0.19999999993999998},","{""source"": ""Cloudpost Ramp"", ""target"": ""MUD"", ""value"":0.03999999997599999},"
+Dark Depths,Lands,1.888888889,2.111111111,0.5277777777500001,"{""source"": ""Dark Depths"", ""target"": ""Lands"", ""value"":0.5277777777500001},","{""source"": ""Dark Depths"", ""target"": ""Lands"", ""value"":0.2785493826867285},"
+Dark Depths,LOAM,1.888888889,2.111111111,0.5277777777500001,"{""source"": ""Dark Depths"", ""target"": ""LOAM"", ""value"":0.5277777777500001},","{""source"": ""Dark Depths"", ""target"": ""LOAM"", ""value"":0.2785493826867285},"
+Doomsday,Dredge,2.0,2.0,0.5,"{""source"": ""Doomsday"", ""target"": ""Dredge"", ""value"":0.5},","{""source"": ""Doomsday"", ""target"": ""Dredge"", ""value"":0.25},"
+Doomsday,Storm,0.0,4.0,1.0,"{""source"": ""Doomsday"", ""target"": ""Storm"", ""value"":1.0},","{""source"": ""Doomsday"", ""target"": ""Storm"", ""value"":1.0},"
+Dredge,Storm,2.0,2.0,0.5,"{""source"": ""Dredge"", ""target"": ""Storm"", ""value"":0.5},","{""source"": ""Dredge"", ""target"": ""Storm"", ""value"":0.25},"
+Eldrazi Aggro,MUD,1.6,2.4,0.6,"{""source"": ""Eldrazi Aggro"", ""target"": ""MUD"", ""value"":0.6},","{""source"": ""Eldrazi Aggro"", ""target"": ""MUD"", ""value"":0.36},"
+Lands,LOAM,0.0,4.0,1.0,"{""source"": ""Lands"", ""target"": ""LOAM"", ""value"":1.0},","{""source"": ""Lands"", ""target"": ""LOAM"", ""value"":1.0},"

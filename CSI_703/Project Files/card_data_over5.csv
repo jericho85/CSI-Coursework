@@ -1,0 +1,243 @@
+Name,Type,Legendary,Land,Creature,Artifact,Enchantment,Planeswalker,Instant,Sorcery,Price
+Gideon of the Trials,Planeswalker - Gideon (3),0,0,0,0,0,1,0,0,5
+"Grenzo, Havoc Raiser",Legendary Creature - Goblin Rogue,1,0,1,0,0,0,0,0,5
+Inquisition of Kozilek,Sorcery,0,0,0,0,0,0,0,1,5
+Past in Flames,Sorcery,0,0,0,0,0,0,0,1,5
+Galerider Sliver,Creature - Sliver,0,0,1,0,0,0,0,0,5.08
+Kuldotha Forgemaster,Artifact Creature - Construct,0,0,1,1,0,0,0,0,5.08
+Scryb Ranger,Creature - Faerie,0,0,1,0,0,0,0,0,5.1
+Thran Dynamo,Artifact,0,0,0,1,0,0,0,0,5.13
+Phyrexian Crusader,Creature - Zombie Knight,0,0,1,0,0,0,0,0,5.19
+Chancellor of the Annex,Creature - Angel,0,0,1,0,0,0,0,0,5.22
+"Vraska, Golgari Queen",Legendary Planeswalker - Vraska (4),1,0,0,0,0,1,0,0,5.27
+Manabond,Enchantment,0,0,0,0,1,0,0,0,5.34
+Cataclysm,Sorcery,0,0,0,0,0,0,0,1,5.39
+"Nicol Bolas, Planeswalker",Legendary Planeswalker - Bolas (5),1,0,0,0,0,1,0,0,5.39
+Arcane Artisan,Creature - Human Wizard,0,0,1,0,0,0,0,0,5.41
+Basilisk Collar,Artifact - Equipment,0,0,0,1,0,0,0,0,5.55
+Bridge from Below,Enchantment,0,0,0,0,1,0,0,0,5.67
+Brightling,Creature - Shapeshifter,0,0,1,0,0,0,0,0,5.9
+Blinkmoth Nexus,Land,0,1,0,0,0,0,0,0,5.99
+Grafdigger's Cage,Artifact,0,0,0,1,0,0,0,0,6.11
+Omniscience,Enchantment,0,0,0,0,1,0,0,0,6.12
+Shattering Spree,Sorcery,0,0,0,0,0,0,0,1,6.13
+Pyromancer Ascension,Enchantment,0,0,0,0,1,0,0,0,6.25
+Hero of Bladehold,Creature - Human Knight,0,0,1,0,0,0,0,0,6.26
+Eidolon of the Great Revel,Enchantment Creature - Spirit,0,0,1,0,1,0,0,0,6.37
+"Tezzeret, Artifice Master",Legendary Planeswalker - Tezzeret (5),1,0,0,0,0,1,0,0,6.43
+Drowned Catacomb,Land,0,1,0,0,0,0,0,0,6.69
+Thought-Knot Seer,Creature - Eldrazi,0,0,1,0,0,0,0,0,6.99
+Lim-Dûl's Vault,Instant,0,0,0,0,0,0,1,0,7
+Fauna Shaman,Creature - Elf Shaman,0,0,1,0,0,0,0,0,7.03
+Maelstrom Pulse,Sorcery,0,0,0,0,0,0,0,1,7.03
+Cunning Wish,Instant,0,0,0,0,0,0,1,0,7.07
+Birds of Paradise,Creature - Bird,0,0,1,0,0,0,0,0,7.14
+Gravecrawler,Creature - Zombie,0,0,1,0,0,0,0,0,7.2
+Flagstones of Trokair,Legendary Land,1,1,0,0,0,0,0,0,7.31
+Lightning Greaves,Artifact - Equipment,0,0,0,1,0,0,0,0,7.35
+"Gideon, Ally of Zendikar",Planeswalker - Gideon (4),0,0,0,0,0,1,0,0,7.36
+Ajani Vengeant,Planeswalker - Ajani,0,0,0,0,0,1,0,0,7.42
+Spellseeker,Creature - Human Wizard,0,0,1,0,0,0,0,0,7.43
+Eye of Ugin,Legendary Land,1,1,0,0,0,0,0,0,7.59
+Mindbreak Trap,Instant - Trap,0,0,0,0,0,0,1,0,7.64
+Hangarback Walker,Artifact Creature - Construct,0,0,1,1,0,0,0,0,7.91
+Eldrazi Temple,Land,0,1,0,0,0,0,0,0,7.94
+Lotus Petal,Artifact,0,0,0,1,0,0,0,0,7.99
+Magus of the Moon,Creature - Human Wizard,0,0,1,0,0,0,0,0,7.99
+Sliver Hive,Land,0,1,0,0,0,0,0,0,7.99
+Containment Priest,Creature - Human Cleric,0,0,1,0,0,0,0,0,8
+Steely Resolve,Enchantment,0,0,0,0,1,0,0,0,8
+"Sigarda, Host of Herons",Legendary Creature - Angel,1,0,1,0,0,0,0,0,8.04
+Meekstone,Artifact,0,0,0,1,0,0,0,0,8.07
+Runed Halo,Enchantment,0,0,0,0,1,0,0,0,8.07
+Sylvan Safekeeper,Creature - Human Wizard,0,0,1,0,0,0,0,0,8.07
+Heritage Druid,Creature - Elf Druid,0,0,1,0,0,0,0,0,8.16
+Energy Field,Enchantment,0,0,0,0,1,0,0,0,8.36
+Ancient Ziggurat,Land,0,1,0,0,0,0,0,0,8.48
+Mishra's Bauble,Artifact,0,0,0,1,0,0,0,0,8.49
+Defense Grid,Artifact,0,0,0,1,0,0,0,0,8.5
+Platinum Emperion,Artifact Creature - Golem,0,0,1,1,0,0,0,0,8.81
+All Is Dust,Tribal Sorcery - Eldrazi,0,0,0,0,0,0,0,1,8.86
+Grindstone,Artifact,0,0,0,1,0,0,0,0,8.96
+Ethersworn Canonist,Artifact Creature - Human Cleric,0,0,1,1,0,0,0,0,8.99
+Mutavault,Land,0,1,0,0,0,0,0,0,8.99
+Spellskite,Artifact Creature - Horror,0,0,1,1,0,0,0,0,8.99
+Baleful Strix,Artifact Creature - Bird,0,0,1,1,0,0,0,0,9
+Blood Crypt,Land - Swamp Mountain,0,1,0,0,0,0,0,0,9
+Green Sun's Zenith,Sorcery,0,0,0,0,0,0,0,1,9.14
+Grim Lavamancer,Creature - Human Wizard,0,0,1,0,0,0,0,0,9.33
+Entomb,Instant,0,0,0,0,0,0,1,0,9.49
+Path to Exile,Instant,0,0,0,0,0,0,1,0,9.49
+Progenitus,Legendary Creature - Hydra Avatar,1,0,1,0,0,0,0,0,9.49
+Painter's Servant,Artifact Creature - Scarecrow,0,0,1,1,0,0,0,0,9.52
+"Sorin, Lord of Innistrad",Planeswalker - Sorin,0,0,0,0,0,1,0,0,9.54
+Tireless Tracker,Creature - Human Scout,0,0,1,0,0,0,0,0,9.89
+"Leovold, Emissary of Trest",Legendary Creature - Elf Advisor,1,0,1,0,0,0,0,0,10.08
+Lord of Atlantis,Creature - Merfolk,0,0,1,0,0,0,0,0,10.6
+City of Brass,Land,0,1,0,0,0,0,0,0,10.61
+"Thalia, Guardian of Thraben",Legendary Creature - Human Soldier,1,0,1,0,0,0,0,0,10.98
+Assassin's Trophy,Instant,0,0,0,0,0,0,1,0,10.99
+Gaddock Teeg,Legendary Creature - Kithkin Advisor,1,0,1,0,0,0,0,0,11
+Mana Confluence,Land,0,1,0,0,0,0,0,0,11.35
+Fiery Confluence,Sorcery,0,0,0,0,0,0,0,1,11.38
+Sanctum Prelate,Creature - Human Cleric,0,0,1,0,0,0,0,0,11.38
+Undiscovered Paradise,Land,0,1,0,0,0,0,0,0,11.64
+Rest in Peace,Enchantment,0,0,0,0,1,0,0,0,11.75
+Temporal Mastery,Sorcery,0,0,0,0,0,0,0,1,11.85
+Unmask,Sorcery,0,0,0,0,0,0,0,1,11.87
+Watery Grave,Land - Island Swamp,0,1,0,0,0,0,0,0,11.92
+Steam Vents,Land - Island Mountain,0,1,0,0,0,0,0,0,11.95
+"Chandra, Torch of Defiance",Planeswalker - Chandra (4),0,0,0,0,0,1,0,0,11.99
+"Kozilek, the Great Distortion",Legendary Creature - Eldrazi,1,0,1,0,0,0,0,0,12
+Berserk,Instant,0,0,0,0,0,0,1,0,12.12
+Goblin Lackey,Creature - Goblin,0,0,1,0,0,0,0,0,12.28
+Ad Nauseam,Instant,0,0,0,0,0,0,1,0,12.32
+Ancestral Vision,Sorcery,0,0,0,0,0,0,0,1,12.34
+Reanimate,Sorcery,0,0,0,0,0,0,0,1,12.97
+Counterbalance,Enchantment,0,0,0,0,1,0,0,0,13.24
+True-Name Nemesis,Creature - Merfolk Rogue,0,0,1,0,0,0,0,0,13.69
+Infernal Tutor,Sorcery,0,0,0,0,0,0,0,1,13.99
+Thoughtseize,Sorcery,0,0,0,0,0,0,0,1,14.13
+"Iona, Shield of Emeria",Legendary Creature - Angel,1,0,1,0,0,0,0,0,14.24
+Dryad Arbor,Land Creature - Forest Dryad,0,1,1,0,0,0,0,0,14.25
+Through the Breach,Instant - Arcane,0,0,0,0,0,0,1,0,14.27
+"Elspeth, Knight-Errant",Legendary Planeswalker - Elspeth (4),1,0,0,0,0,1,0,0,14.5
+Extirpate,Instant,0,0,0,0,0,0,1,0,14.55
+Grave Titan,Creature - Giant,0,0,1,0,0,0,0,0,14.83
+Walking Ballista,Artifact Creature - Construct,0,0,1,1,0,0,0,0,14.95
+Show and Tell,Sorcery,0,0,0,0,0,0,0,1,14.98
+Archfiend of Despair,Creature - Demon,0,0,1,0,0,0,0,0,14.99
+Glimpse of Nature,Sorcery,0,0,0,0,0,0,0,1,14.99
+Life from the Loam,Sorcery,0,0,0,0,0,0,0,1,14.99
+"Urborg, Tomb of Yawgmoth",Legendary Land,1,1,0,0,0,0,0,0,14.99
+Crucible of Worlds,Artifact,0,0,0,1,0,0,0,0,15.04
+Steel Overseer,Artifact Creature - Construct,0,0,1,1,0,0,0,0,15.05
+Search for Azcanta,Legendary Enchantment,1,0,0,0,1,0,0,0,15.23
+Thing in the Ice,Creature - Horror,0,0,1,0,0,0,0,0,15.66
+Natural Order,Sorcery,0,0,0,0,0,0,0,1,15.68
+Flusterstorm,Instant,0,0,0,0,0,0,1,0,15.95
+"Titania, Protector of Argoth",Legendary Creature - Elemental,1,0,1,0,0,0,0,0,16
+Gemstone Mine,Land,0,1,0,0,0,0,0,0,16.05
+Kolaghan's Command,Instant,0,0,0,0,0,0,1,0,16.06
+Phantasmal Image,Creature - Illusion,0,0,1,0,0,0,0,0,16.66
+Windswept Heath,Land,0,1,0,0,0,0,0,0,16.74
+Batterskull,Artifact - Equipment,0,0,0,1,0,0,0,0,17.09
+Collective Brutality,Sorcery,0,0,0,0,0,0,0,1,17.09
+"Jace, Vryn's Prodigy",Legendary Creature - Human Wizard,1,0,1,0,0,0,0,0,17.17
+Sword of War and Peace,Artifact - Equipment,0,0,0,1,0,0,0,0,17.33
+Blood Moon,Enchantment,0,0,0,0,1,0,0,0,18
+Griselbrand,Legendary Creature - Demon,1,0,1,0,0,0,0,0,18
+Council's Judgment,Sorcery,0,0,0,0,0,0,0,1,18.01
+Inkmoth Nexus,Land,0,1,0,0,0,0,0,0,18.16
+Meren of Clan Nel Toth,Legendary Creature - Human Shaman,1,0,1,0,0,0,0,0,18.38
+"Boseiju, Who Shelters All",Legendary Land,1,1,0,0,0,0,0,0,18.51
+Umezawa's Jitte,Legendary Artifact - Equipment,1,0,0,1,0,0,0,0,18.95
+Death's Shadow,Creature - Avatar,0,0,1,0,0,0,0,0,19.19
+Bloodghast,Creature - Vampire Spirit,0,0,1,0,0,0,0,0,19.35
+"Karn, Scion of Urza",Legendary Planeswalker - Karn (5),1,0,0,0,0,1,0,0,19.44
+Rishadan Port,Land,0,1,0,0,0,0,0,0,19.73
+"Kaya, Ghost Assassin",Planeswalker - Kaya (5),0,0,0,0,0,1,0,0,19.84
+Sphere of Resistance,Artifact,0,0,0,1,0,0,0,0,19.96
+"Elesh Norn, Grand Cenobite",Legendary Creature - Praetor,1,0,1,0,0,0,0,0,19.99
+Monastery Mentor,Creature - Human Monk,0,0,1,0,0,0,0,0,19.99
+Manamorphose,Instant,0,0,0,0,0,0,1,0,20
+Thorn of Amethyst,Artifact,0,0,0,1,0,0,0,0,20
+Mystic Gate,Land,0,1,0,0,0,0,0,0,20.69
+Maze of Ith,Land,0,1,0,0,0,0,0,0,20.82
+Vendilion Clique,Legendary Creature - Faerie Wizard,1,0,1,0,0,0,0,0,20.93
+Meddling Mage,Creature - Human Wizard,0,0,1,0,0,0,0,0,21.03
+Goblin Guide,Creature - Goblin Scout,0,0,1,0,0,0,0,0,21.99
+Arena Rector,Creature - Human Cleric,0,0,1,0,0,0,0,0,22.9
+Sneak Attack,Enchantment,0,0,0,0,1,0,0,0,23
+Grove of the Burnwillows,Land,0,1,0,0,0,0,0,0,23.06
+Arclight Phoenix,Creature - Phoenix,0,0,1,0,0,0,0,0,23.15
+Massacre Wurm,Creature - Wurm,0,0,1,0,0,0,0,0,23.52
+Karakas,Legendary Land,1,1,0,0,0,0,0,0,24.5
+Recruiter of the Guard,Creature - Human Soldier,0,0,1,0,0,0,0,0,24.67
+Leyline of Sanctity,Enchantment,0,0,0,0,1,0,0,0,24.87
+Enlightened Tutor,Instant,0,0,0,0,0,0,1,0,24.99
+"Emrakul, the Promised End",Legendary Creature - Eldrazi,1,0,1,0,0,0,0,0,25
+Hydroid Krasis,Creature - Jellyfish Hydra Beast,0,0,1,0,0,0,0,0,25
+Ancient Tomb,Land,0,1,0,0,0,0,0,0,25.2
+Academy Ruins,Legendary Land,1,1,0,0,0,0,0,0,25.59
+Wurmcoil Engine,Artifact Creature - Wurm,0,0,1,1,0,0,0,0,25.91
+Cryptic Command,Instant,0,0,0,0,0,0,1,0,25.99
+Toxic Deluge,Sorcery,0,0,0,0,0,0,0,1,26.73
+Engineered Explosives,Artifact,0,0,0,1,0,0,0,0,26.8
+Flooded Strand,Land,0,1,0,0,0,0,0,0,27.99
+Trinisphere,Artifact,0,0,0,1,0,0,0,0,28
+Exploration,Enchantment,0,0,0,0,1,0,0,0,28.24
+Phyrexian Tower,Legendary Land,1,1,0,0,0,0,0,0,28.24
+"Emrakul, the Aeons Torn",Legendary Creature - Eldrazi,1,0,1,0,0,0,0,0,29.01
+Helm of Obedience,Artifact,0,0,0,1,0,0,0,0,29.3
+Imperial Recruiter,Creature - Human Advisor,0,0,1,0,0,0,0,0,29.99
+Polluted Delta,Land,0,1,0,0,0,0,0,0,29.99
+Wooded Foothills,Land,0,1,0,0,0,0,0,0,30.39
+Dark Depths,Legendary Snow Land,1,1,0,0,0,0,0,0,30.54
+Back to Basics,Enchantment,0,0,0,0,1,0,0,0,30.87
+Null Rod,Artifact,0,0,0,1,0,0,0,0,31.97
+Sword of Light and Shadow,Artifact - Equipment,0,0,0,1,0,0,0,0,31.99
+Vesuva,Land,0,1,0,0,0,0,0,0,34.49
+Craterhoof Behemoth,Creature - Beast,0,0,1,0,0,0,0,0,34.67
+Humility,Enchantment,0,0,0,0,1,0,0,0,34.99
+Bloodstained Mire,Land,0,1,0,0,0,0,0,0,35
+Chrome Mox,Artifact,0,0,0,1,0,0,0,0,35.99
+Sword of Feast and Famine,Artifact - Equipment,0,0,0,1,0,0,0,0,37.84
+Lake of the Dead,Land,0,1,0,0,0,0,0,0,37.99
+Stoneforge Mystic,Creature - Kor Artificer,0,0,1,0,0,0,0,0,37.99
+Aether Vial,Artifact,0,0,0,1,0,0,0,0,38
+Staff of Domination,Artifact,0,0,0,1,0,0,0,0,38.47
+Sylvan Library,Enchantment,0,0,0,0,1,0,0,0,38.95
+Bitterblossom,Tribal Enchantment - Faerie,0,0,0,0,1,0,0,0,39.25
+Food Chain,Enchantment,0,0,0,0,1,0,0,0,39.32
+"Ulamog, the Ceaseless Hunger",Legendary Creature - Eldrazi,1,0,1,0,0,0,0,0,39.99
+"Teferi, Hero of Dominaria",Legendary Planeswalker - Teferi (4),1,0,0,0,0,1,0,0,41
+Marsh Flats,Land,0,1,0,0,0,0,0,0,42.94
+Arcbound Ravager,Artifact Creature - Beast,0,0,1,1,0,0,0,0,44.99
+Arid Mesa,Land,0,1,0,0,0,0,0,0,44.99
+Ensnaring Bridge,Artifact,0,0,0,1,0,0,0,0,44.99
+Gemstone Caverns,Legendary Land,1,1,0,0,0,0,0,0,44.99
+Wasteland,Land,0,1,0,0,0,0,0,0,44.99
+Noble Hierarch,Creature - Human Druid,0,0,1,0,0,0,0,0,48.12
+"Liliana, the Last Hope",Legendary Planeswalker - Liliana (3),1,0,0,0,0,1,0,0,49.62
+Metalworker,Artifact Creature - Construct,0,0,1,1,0,0,0,0,49.91
+Leyline of the Void,Enchantment,0,0,0,0,1,0,0,0,51.26
+Tarmogoyf,Creature - Lhurgoyf,0,0,1,0,0,0,0,0,52.2
+Gilded Drake,Creature - Drake,0,0,1,0,0,0,0,0,58.48
+Chalice of the Void,Artifact,0,0,0,1,0,0,0,0,59.99
+Intuition,Instant,0,0,0,0,0,0,1,0,59.99
+Surgical Extraction,Instant,0,0,0,0,0,0,1,0,60.53
+Academy Rector,Creature - Human Cleric,0,0,1,0,0,0,0,0,62.48
+Sword of Fire and Ice,Artifact - Equipment,0,0,0,1,0,0,0,0,62.99
+Snapcaster Mage,Creature - Human Wizard,0,0,1,0,0,0,0,0,65.12
+Cavern of Souls,Land,0,1,0,0,0,0,0,0,66
+"Ugin, the Spirit Dragon",Legendary Planeswalker - Ugin (7),1,0,0,0,0,1,0,0,70
+Verdant Catacombs,Land,0,1,0,0,0,0,0,0,70
+Blightsteel Colossus,Artifact Creature - Golem,0,0,1,1,0,0,0,0,77.26
+Misty Rainforest,Land,0,1,0,0,0,0,0,0,79.95
+Horizon Canopy,Land,0,1,0,0,0,0,0,0,80.49
+Liliana of the Veil,Legendary Planeswalker - Liliana (3),1,0,0,0,0,1,0,0,83
+Dark Confidant,Creature - Human Wizard,0,0,1,0,0,0,0,0,86.18
+Mox Opal,Legendary Artifact,1,0,0,1,0,0,0,0,97.75
+Grim Monolith,Artifact,0,0,0,1,0,0,0,0,109.97
+Scalding Tarn,Land,0,1,0,0,0,0,0,0,109.99
+Plateau,Land - Mountain Plains,0,1,0,0,0,0,0,0,136.68
+"Jace, the Mind Sculptor",Legendary Planeswalker - Jace (3),1,0,0,0,0,1,0,0,149.49
+Force of Will,Instant,0,0,0,0,0,0,1,0,149.87
+Taiga,Land - Mountain Forest,0,1,0,0,0,0,0,0,167.6
+Savannah,Land - Forest Plains,0,1,0,0,0,0,0,0,171.39
+Scrubland,Land - Plains Swamp,0,1,0,0,0,0,0,0,188.09
+Lion's Eye Diamond,Artifact,0,0,0,1,0,0,0,0,194.99
+Mox Diamond,Artifact,0,0,0,1,0,0,0,0,210.04
+City of Traitors,Land,0,1,0,0,0,0,0,0,215.04
+Grim Tutor,Sorcery,0,0,0,0,0,0,0,1,219.69
+Badlands,Land - Swamp Mountain,0,1,0,0,0,0,0,0,263.04
+Tropical Island,Land - Forest Island,0,1,0,0,0,0,0,0,288.74
+Bayou,Land - Swamp Forest,0,1,0,0,0,0,0,0,293.99
+Tundra,Land - Plains Island,0,1,0,0,0,0,0,0,334.49
+Gaea's Cradle,Legendary Land,1,1,0,0,0,0,0,0,351.89
+Volcanic Island,Land - Island Mountain,0,1,0,0,0,0,0,0,450
+Underground Sea,Land - Island Swamp,0,1,0,0,0,0,0,0,599.99
+Drop of Honey,Enchantment,0,0,0,0,1,0,0,0,775
+Candelabra of Tawnos,Artifact,0,0,0,1,0,0,0,0,887.5
+The Tabernacle at Pendrell Vale,Legendary Land,1,1,0,0,0,0,0,0,2480.49

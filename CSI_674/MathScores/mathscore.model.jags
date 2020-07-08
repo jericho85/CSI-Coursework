@@ -1,0 +1,12 @@
+model {
+	for(i in 1:nS) {
+	  theta[i] ~ dnorm(mu, lambda)       # observation mean for school i
+	}
+	for (j in 1:n) {
+	  score[j] ~ dnorm(theta[school[j]],rho)  # observation for student
+	}
+	
+	mu ~ dnorm(50,0.0016)    # normal prior distribution for school means
+	lambda ~ dgamma(0.5,50)  # gamma prior distribution for 1/(tau^2)
+	rho ~ dgamma(0.5,50)     # gamma prior distribution for 1/(sigma^2)
+}

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<!-- 
+CSI 703 Homework 2
+Jericho McLeod    
+April 5, 2019
+
+I am relatively new to javascript, so I apologize in advance for the
+sloppiness of this code. This could be refactored into a much shorter
+page once I am more familiar with javascript.-->
+<head>
+
+</head>
+
+<body>
+    <h1>Fifa World Cup Statistics</h1>
+    <!-- 
+    These are the buttons that shift through pages. 
+    A dropdown selector could have been used with:
+    <select>
+        <option value="updateData1">Number of Teams</option>
+        .....
+    </select>
+
+    But I prefer button navigation for just a few options 
+    -->
+    <button onclick="updateData1()">Number of Teams</button> 
+    <button onclick="updateData2()">Number of Matches</button>
+    <button onclick="updateData3()">Number of Goals</button>
+    <button onclick="updateData4()">Average Attendance</button>
+    <br>
+    <!-- A subheader with an ID to grab to update when new data is selected-->
+    <h3 id="subheader">Displaying Number of Teams</h3>
+    <!-- An SVG container for the visualizations-->
+    <svg id="container" height="500" width="650" , style="border: solid 1px #000">
+        <g id="body" style="transform:translate(200px,0px)"></g>
+        <g id="yAxis"></g>
+        <g id="xAxis"></g>
+
+    </svg>
+</body>
+<script src="d3.js"></script>
+<script>
+    // Creating a body variable to shorten other functions
+    let body = d3.select("#body")
+
+    // Initial data read
+    d3.csv("fifa-world-cup.csv").then(showData)
+
+    // The primary function to create the graph and axes
+    function showData(clients) {
+        let max = d3.max(clients, d => d.TEAMS) //find max for scale function
+        let scale = d3.scaleLinear().range([0, 400]) //create scale function
+            .domain([0, max])
+
+        let scalePosition = d3.scaleBand() // Use scale function to map data to graph
+            .range([20, 450])
+            .domain(clients.map(d => d.EDITION))
+        scalePosition.padding(0.4) // Padding the bar chart so the data isn't overlapped
+        let join = body.selectAll("rect") //shorted selection, not necessarily needed
+            .data(clients) 
+
+        let clicked = 0  // counter for whether there is a selection active
+
+        join.enter() // draw initial rectangles of bar chart
+            .append("rect")
+            .style("fill", "blue")
+            .style("stroke", "white")
+            .style("width", d => scale(d.TEAMS))
+            .style("height", scalePosition.bandwidth())
+            .style("y", d => scalePosition(d.EDITION))
+            .on("click",function(){ // function that checks status of click, and updates colors based on result
+                if (clicked == 0) {
+                    d3.selectAll("rect").style("fill","dodgerblue")
+                    d3.select(this).style("fill","darkblue")
+                    clicked +=1
+                    console.log(this)
+                } else {
+                    d3.selectAll("rect").style("fill","blue")
+                    clicked -=1
+                }
+            })
+
+
+        let xAxis = d3.axisBottom(scale) // Create X axis
+            .ticks(4)
+            .tickFormat(d=>d+" Teams")
+        d3.select("#xAxis") // position X axis
+            .attr("transform","translate(200,450)")
+            .call(xAxis)
+
+        let yAxis = d3.axisLeft(scalePosition) // Create Y axis
+        d3.select("#yAxis") //Position Y axis
+            .attr("transform","translate(200,0)")
+            .call(yAxis)
+    }
+
+    function updateData1() {
+        // Repeat of prior function on button click.
+        // This re-draws the data using a new column selection
+        //
+        // I am not yet sure how to set global variables in 
+        // Javascript as I've just started using the language
+        d3.select("#subheader").text("Displaying Number of Teams")
+        let body = d3.select("#body")
+        d3.csv("fifa-world-cup.csv").then(showData1)
+        function showData1(clients) {
+            let max = d3.max(clients, d => d.TEAMS)
+            let scale = d3.scaleLinear().range([0, 400])
+                .domain([0, max])
+
+            let scalePosition = d3.scaleBand()
+                .range([20, 450])
+                .domain(clients.map(d => d.EDITION))
+            scalePosition.padding(0.4)
+            let join = body.selectAll("rect").remove().exit()
+                .data(clients)
+            let clicked =0
+            join.enter()
+                .append("rect")
+                .style("fill", "blue")
+                .style("stroke", "white")
+                .style("width", d => scale(d.TEAMS))
+                .style("height", scalePosition.bandwidth())
+                .style("y", d => scalePosition(d.EDITION))
+                .on("click",function(){
+                    if (clicked == 0) {
+                        d3.selectAll("rect").style("fill","dodgerblue")
+                        d3.select(this).style("fill","darkblue")
+                        clicked +=1
+                        console.log(this)
+                    } else {
+                        d3.selectAll("rect").style("fill","blue")
+                        clicked -=1
+                    }
+                })
+
+            let xAxis = d3.axisBottom(scale)
+                .ticks(4)
+                .tickFormat(d=>d+" Teams")
+            d3.select("#xAxis")
+                .attr("transform","translate(200,450)")
+                .call(xAxis)
+
+            let yAxis = d3.axisLeft(scalePosition)
+            d3.select("#yAxis")
+            .attr("transform","translate(200,0)")
+                .call(yAxis)
+
+        }
+    }
+
+    function updateData2() {
+        d3.select("#subheader").text("Displaying Number of Matches")
+        let body = d3.select("#body")
+        d3.csv("fifa-world-cup.csv").then(showData2)
+        function showData2(clients) {
+            let max = d3.max(clients, d => d.MATCHES)
+            let scale = d3.scaleLinear().range([0, 400])
+                .domain([0, max])
+
+            let scalePosition = d3.scaleBand()
+                .range([20, 450])
+                .domain(clients.map(d => d.EDITION))
+            scalePosition.padding(0.4)
+            let join = body.selectAll("rect").remove().exit()
+                .data(clients)
+            let clicked =0
+            join.enter()
+                .append("rect")
+                .style("fill", "blue")
+                .style("stroke", "white")
+                .style("width", d => scale(d.MATCHES))
+                .style("height", scalePosition.bandwidth())
+                .style("y", d => scalePosition(d.EDITION))
+                .on("click",function(){
+                    if (clicked == 0) {
+                        d3.selectAll("rect").style("fill","dodgerblue")
+                        d3.select(this).style("fill","darkblue")
+                        clicked +=1
+                        console.log(this)
+                    } else {
+                        d3.selectAll("rect").style("fill","blue")
+                        clicked -=1
+                    }
+                })
+
+            let xAxis = d3.axisBottom(scale)
+                .ticks(4)
+                .tickFormat(d=>d+" Matches")
+            d3.select("#xAxis")
+                .attr("transform","translate(200,450)")
+                .call(xAxis)
+
+            let yAxis = d3.axisLeft(scalePosition)
+            d3.select("#yAxis")
+            .attr("transform","translate(200,0)")
+                .call(yAxis)
+        }
+    }
+
+    function updateData3() {
+        d3.select("#subheader").text("Displaying Number of Goals")
+        let body = d3.select("#body")
+        d3.csv("fifa-world-cup.csv").then(showData2)
+        function showData2(clients) {
+            let max = d3.max(clients, d => d.GOALS)
+            console.log(max) // This max function did not return the correct result
+            // As a work around, I manually looked up the max value in the data
+            // Once I am more familiar with JS, I will just use a function of
+            // my own to ensure value types are correct and find the max
+            let scale = d3.scaleLinear().range([0, 400])
+                .domain([0, 171]) // use of the manual value 171 here should be a max variable
+// No further annotation in code as remaining functions are copies of prior functions
+            let scalePosition = d3.scaleBand()
+                .range([20, 450])
+                .domain(clients.map(d => d.EDITION))
+            scalePosition.padding(0.4)
+            let join = body.selectAll("rect").remove().exit()
+                .data(clients)
+            let clicked =0
+            join.enter()
+                .append("rect")
+                .style("fill", "blue")
+                .style("stroke", "white")
+                .style("width", d => scale(d.GOALS))
+                .style("height", scalePosition.bandwidth())
+                .style("y", d => scalePosition(d.EDITION))
+                .on("click",function(){
+                    if (clicked == 0) {
+                        d3.selectAll("rect").style("fill","dodgerblue")
+                        d3.select(this).style("fill","darkblue")
+                        clicked +=1
+                        console.log(this)
+                    } else {
+                        d3.selectAll("rect").style("fill","blue")
+                        clicked -=1
+                    }
+                })
+
+            let xAxis = d3.axisBottom(scale)
+                .ticks(5)
+                .tickFormat(d=>d + " Goals")
+            d3.select("#xAxis")
+                .attr("transform","translate(200,450)")
+                .call(xAxis)
+
+            let yAxis = d3.axisLeft(scalePosition)
+            d3.select("#yAxis")
+            .attr("transform","translate(200,0)")
+                .call(yAxis)
+        }
+    }
+
+    function updateData4() {
+        d3.select("#subheader").text("Displaying Average Number of Attendees")
+        let body = d3.select("#body")
+        d3.csv("fifa-world-cup.csv").then(showData4)
+        function showData4(clients) {
+            let max = d3.max(clients, d => d.AVERAGE_ATTENDANCE)
+            let scale = d3.scaleLinear().range([0, 400])
+                .domain([0, max])
+
+            let scalePosition = d3.scaleBand()
+                .range([20, 450])
+                .domain(clients.map(d => d.EDITION))
+            scalePosition.padding(0.4)
+            let join = body.selectAll("rect").remove().exit()
+                .data(clients)
+            let clicked =0
+            join.enter()
+                .append("rect")
+                .style("fill", "blue")
+                .style("stroke", "white")
+                .style("width", d => scale(d.AVERAGE_ATTENDANCE))
+                .style("height", scalePosition.bandwidth())
+                .style("y", d => scalePosition(d.EDITION))
+                .on("click",function(){
+                    if (clicked == 0) {
+                        d3.selectAll("rect").style("fill","dodgerblue")
+                        d3.select(this).style("fill","darkblue")
+                        clicked +=1
+                        console.log(this)
+                    } else {
+                        d3.selectAll("rect").style("fill","blue")
+                        clicked -=1
+                    }
+                })
+
+            let xAxis = d3.axisBottom(scale)
+                .ticks(3)
+                .tickFormat(d=>d+" Avg. Attendees")
+            d3.select("#xAxis")
+                .attr("transform","translate(200,450)")
+                .call(xAxis)
+
+            let yAxis = d3.axisLeft(scalePosition)
+            d3.select("#yAxis")
+            .attr("transform","translate(200,0)")
+                .call(yAxis)
+        }
+    }
+
+
+
+     
+</script>
+
+</html>

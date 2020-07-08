@@ -1,0 +1,68 @@
+table {
+  border-collapse: collapse;
+}
+
+table, td, th {
+  border: 1px solid rgb(34, 34, 34)
+}
+
+
+tr {font: 'calibri'}
+
+td, th {
+    padding: 4px 10px;
+}
+
+th {
+    text-align: left;
+}
+
+tr:nth-child(even) {background-color: #f5f5f58c}
+
+.links line {
+  stroke: #888;
+  stroke-opacity: 0.6;
+}
+
+.nodes circle {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+text {
+  font-family: sans-serif;
+  font-size: 10px;
+}
+
+body {
+  background-color: #faf9f4;
+  position: relative;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-18%)
+}
+button {
+  vertical-align: top;
+  margin:4px;
+  font-size:12px;
+
+}
+
+div {
+  display: block;
+  width: 800px;
+}
+
+/*
+#canvas2{
+  background-color: #faf9f4;
+  position: relative;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-90%)
+}
+*/
+
+.center-me {
+  margin: 0 auto;
+}

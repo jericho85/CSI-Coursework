@@ -1,0 +1,17 @@
+0,1,2,3,4,5,6
+Deck A,Deck B,Different,Same,Jaccard,,
+4-c Control,Antiquities War,1.0,1.0,0.5,"{""source"": ""4-c Control"", ""target"": ""Antiquities War"", ""value"":0.5},","{""source"": ""4-c Control"", ""target"": ""Antiquities War"", ""value"":0.25},"
+4-c Control,BUG Midrange,0.0,1.0,1.0,"{""source"": ""4-c Control"", ""target"": ""BUG Midrange"", ""value"":1.0},","{""source"": ""4-c Control"", ""target"": ""BUG Midrange"", ""value"":1.0},"
+4-c Control,Delver (Other),0.0,1.0,1.0,"{""source"": ""4-c Control"", ""target"": ""Delver (Other)"", ""value"":1.0},","{""source"": ""4-c Control"", ""target"": ""Delver (Other)"", ""value"":1.0},"
+4-c Control,Junk,1.0,1.0,0.5,"{""source"": ""4-c Control"", ""target"": ""Junk"", ""value"":0.5},","{""source"": ""4-c Control"", ""target"": ""Junk"", ""value"":0.25},"
+4-c Control,Pikula,0.5,1.0,0.6666666666666666,"{""source"": ""4-c Control"", ""target"": ""Pikula"", ""value"":0.6666666666666666},","{""source"": ""4-c Control"", ""target"": ""Pikula"", ""value"":0.4444444444444444},"
+Antiquities War,BUG Midrange,1.0,1.0,0.5,"{""source"": ""Antiquities War"", ""target"": ""BUG Midrange"", ""value"":0.5},","{""source"": ""Antiquities War"", ""target"": ""BUG Midrange"", ""value"":0.25},"
+Antiquities War,Delver (Other),1.0,1.0,0.5,"{""source"": ""Antiquities War"", ""target"": ""Delver (Other)"", ""value"":0.5},","{""source"": ""Antiquities War"", ""target"": ""Delver (Other)"", ""value"":0.25},"
+Antiquities War,Junk,0.0,2.0,1.0,"{""source"": ""Antiquities War"", ""target"": ""Junk"", ""value"":1.0},","{""source"": ""Antiquities War"", ""target"": ""Junk"", ""value"":1.0},"
+Antiquities War,Pikula,0.5,1.5,0.75,"{""source"": ""Antiquities War"", ""target"": ""Pikula"", ""value"":0.75},","{""source"": ""Antiquities War"", ""target"": ""Pikula"", ""value"":0.5625},"
+BUG Midrange,Delver (Other),0.0,1.0,1.0,"{""source"": ""BUG Midrange"", ""target"": ""Delver (Other)"", ""value"":1.0},","{""source"": ""BUG Midrange"", ""target"": ""Delver (Other)"", ""value"":1.0},"
+BUG Midrange,Junk,1.0,1.0,0.5,"{""source"": ""BUG Midrange"", ""target"": ""Junk"", ""value"":0.5},","{""source"": ""BUG Midrange"", ""target"": ""Junk"", ""value"":0.25},"
+BUG Midrange,Pikula,0.5,1.0,0.6666666666666666,"{""source"": ""BUG Midrange"", ""target"": ""Pikula"", ""value"":0.6666666666666666},","{""source"": ""BUG Midrange"", ""target"": ""Pikula"", ""value"":0.4444444444444444},"
+Delver (Other),Junk,1.0,1.0,0.5,"{""source"": ""Delver (Other)"", ""target"": ""Junk"", ""value"":0.5},","{""source"": ""Delver (Other)"", ""target"": ""Junk"", ""value"":0.25},"
+Delver (Other),Pikula,0.5,1.0,0.6666666666666666,"{""source"": ""Delver (Other)"", ""target"": ""Pikula"", ""value"":0.6666666666666666},","{""source"": ""Delver (Other)"", ""target"": ""Pikula"", ""value"":0.4444444444444444},"
+Junk,Pikula,0.5,1.5,0.75,"{""source"": ""Junk"", ""target"": ""Pikula"", ""value"":0.75},","{""source"": ""Junk"", ""target"": ""Pikula"", ""value"":0.5625},"

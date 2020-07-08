@@ -1,0 +1,6 @@
+Things that I did wrong:
+    1) Initialized all weights to the same value. This caused my hidden outputs to all remain the same
+    2) Set unrealistic stopping conditions. This caused my model to train indefinitely or to stop far too soon
+    3) Did not train long enough manually. This caused the model to essentially be as accurate as random guesses
+    4) Used binary outputs for hidden neurons. This just... doesn't work at all
+    5) removed activation function from hidden neurons. This was before other problems, so I do not know the actual impact other than the optimization would be making steps that were inappropriate

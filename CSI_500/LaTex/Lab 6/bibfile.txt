@@ -1,0 +1,5 @@
+@book{Rogers61,
+	author = {Everett Rogers},
+	title = {The Diffusion of Innovation},
+	date = {1961}
+}

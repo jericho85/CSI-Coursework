@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+
+
+</style>
+<h1>Test</h1>
+<body>
+Trial page <br>
+</body>
+<!--
+
+
+var jsonCircles = [
+  { "x_axis": 30, "y_axis": 30, "radius": 20, "color" : "green" },
+  { "x_axis": 70, "y_axis": 70, "radius": 20, "color" : "purple"},
+  { "x_axis": 110, "y_axis": 100, "radius": 20, "color" : "red"}];
+
+var svgContainer = d3.select("body").append("svg")
+                                    .attr("width", 200)
+                                    .attr("height", 200);
+
+console.log(jsonCircles)
+
+var circles = svgContainer.selectAll("circle")
+                          .data(jsonCircles)
+                          .enter()
+                          .append("circle");
+console.log(circles)
+var circleAttributes = circles
+                       .attr("cx", function (d) { return d.x_axis; })
+                       .attr("cy", function (d) { return d.y_axis; })
+                       .attr("r", function (d) { return d.radius; })
+                       .style("fill", function(d) { return d.color; });
+console.log(circleAttributes)
+
+
+
+//var nodeCircle = svg.append("circle")
+//                    .attr("cx",30)
+//                    .attr("cy",30)
+//                    .attr("r",20)
+
+var jsonCircles = [
+    {"x_axis": 30, "y_axis":30, "radius":20, "color":"blue"},
+    {"x_axis": 90, "y_axis":30, "radius":20, "color":"blue"},
+    {"x_axis": 150, "y_axis":30, "radius":20, "color":"blue"}
+-->
+
+<script src="d3.js"></script>
+<script>
+
+var width = 400,
+    height = 400,
+    radius = 6;
+    x0 = width/2
+    y0 = height/2
+    r = 180
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+
+var deckNames = ["4-c Control","Affinity","Antiquities War","Arclight Phoenix",
+                "Belcher","Bomberman","BUG Midrange","Burn","Canadian Threshold",
+                "Cloudpost Ramp","Dark Depths","Death and taxes","Death's Shadow",
+                "Delver (Other)","Doomsday","Dragon Stompy","Dredge",
+                "Eldrazi Aggro","Elves","Food Chain","Goblins","Grixis Control",
+                "Grixis Delver","Humans","Infect","Junk","Lands",
+                "Legacy Landstill","LOAM","Maverick","Merfolk","MUD","Nic Fit",
+                "Painter","Pikula","Reanimator","Slivers","Sneak & Show",
+                "Stoneblade","Storm","UR Delver","UWx Control"]
+
+var decksJSON = []
+
+for(var i = 0; i < deckNames.length; i++) {
+        var x = x0 + r * Math.cos(2 * Math.PI * i / deckNames.length);
+        var y = y0 + r * Math.sin(2 * Math.PI * i /deckNames.length);
+        //console.log(x,y)   
+        var deckName = deckNames[i]
+        decksJSON.push({
+            id:deckName,
+            x_value : x,
+            y_value : y,
+            rad : radius,
+            color : "blue"
+        })
+        createNode(deckName,x,y,radius)   
+    };
+
+function createNode(name,x,y,r){
+    var nodeCircle = svg.append("circle")
+                    .attr("cx",x)
+                    .attr("cy",y)
+                    .attr("r",r)
+                    
+}
+
+
+
+
+var circles = document.getElementsByClassName('circle');
+//console.log(svg)
+
+selectSVG= d3.select()
+selectCircles = selectSVG.selectAll("circle")
+    .enter()
+
+console.log(selectCircles)
+
+for (var i = 0; i<circles.length; ++i) {
+    circles[i].addEventListener('mouseover',logMouseOver);
+    circles[i].addEventListener('mouseout',logMouseOut);
+}
+
+function logMouseOver(){
+    console.log("Mouse over detected")
+}
+
+function logMouseOut(){
+    console.log("Mouse out detected")
+}
+
+</script>
+

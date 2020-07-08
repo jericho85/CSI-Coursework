@@ -1,0 +1,39 @@
+td, th {
+    padding: 4px 10px;
+}
+
+th {
+    text-align: left;
+}
+  
+.links line {
+  stroke: #888;
+  stroke-opacity: 0.6;
+}
+
+.nodes circle {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+text {
+  font-family: sans-serif;
+  font-size: 10px;
+}
+
+body {
+  background-color: #faf9f4;
+
+}
+button {
+  vertical-align: top;
+  margin:4px;
+  font-size:12px;
+
+}
+
+.center {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+} 

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+
+
+</style>
+<h1>Test</h1>
+<body>
+  MTG Legacy Meta in a force-directed graph <br>
+
+  <button onclick="window.location.href = 'page2.html';">Show Data</button> 
+  <button onclick="window.location.href = 'test_page.html';">Show Circle Graph</button>
+  <br>
+  <button onclick="window.location.href = 'data_all.html';">Graph All</button>
+  <button onclick="window.location.href = 'data_artifact.html';">Graph Artifacts</button>
+  <button onclick="window.location.href = 'data_creature.html';">Graph Creatures</button>
+  <button onclick="window.location.href = 'data_enchantment.html';">Graph Enchantments</button>
+  <button onclick="window.location.href = 'data_instant.html';">Graph Instants</button>
+  <button onclick="window.location.href = 'data_land.html';">Graph Lands</button>
+  <button onclick="window.location.href = 'data_planeswalker.html';">Graph Planeswalkers</button>
+  <button onclick="window.location.href = 'data_sorcery.html';">Graph Sorceries </button>
+
+
+</body>
+
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+
+var width = 1000,
+    height = 800,
+    radius = 6;
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+var simulation = d3.forceSimulation()
+    .force("link", d3.forceLink().id(function(d) { return d.id; }))
+    .force("charge", d3.forceManyBody().strength(-1000))
+    .force('collision', d3.forceCollide().radius(function(d) {
+      return d.radius
+    }))
+    .force("center", d3.forceCenter(width / 2, height / 2));
+
+d3.json("data_all_over5.json", function(error, graph) {
+  if (error) throw error;
+
+  var link = svg.append("g")
+      .attr("class", "links")
+    .selectAll("line")
+    .data(graph.links)
+    .enter().append("line")
+      .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
+
+  var node = svg.append("g")
+      .attr("class", "nodes")
+    .selectAll("g")
+    .data(graph.nodes)
+    .enter().append("g")
+    
+  var circles = node.append("circle")
+      .attr("r", 5)
+      .attr("fill", function(d) { return color(d.group); })
+      .call(d3.drag()
+          .on("start", dragstarted)
+          .on("drag", dragged)
+          .on("end", dragended));
+
+  var lables = node.append("text")
+      .text(function(d) {
+        return d.id;
+      })
+      .attr('x', 6)
+      .attr('y', 3);
+
+  node.append("title")
+      .text(function(d) { return d.id; });
+
+  simulation
+      .nodes(graph.nodes)
+      .on("tick", ticked);
+
+  simulation.force("link")
+      .links(graph.links);
+
+  function ticked() {
+    link
+        .attr("x1", function(d) { return d.source.x; })
+        .attr("y1", function(d) { return d.source.y; })
+        .attr("x2", function(d) { return d.target.x; })
+        .attr("y2", function(d) { return d.target.y; });
+
+    node
+        .attr("transform", function(d) {
+          return "translate(" + d.x + "," + d.y + ")";
+        })
+        .attr("cx", function(d) { return d.x = Math.max(radius, Math.min(width - radius, d.x)); })
+        .attr("cy", function(d) { return d.y = Math.max(radius, Math.min(height - radius, d.y)); });
+  }
+});
+
+function dragstarted(d) {
+  if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+  d.fx = d.x;
+  d.fy = d.y;
+}
+
+function dragged(d) {
+  d.fx = d3.event.x;
+  d.fy = d3.event.y;
+}
+
+function dragended(d) {
+  if (!d3.event.active) simulation.alphaTarget(0);
+  d.fx = null;
+  d.fy = null;
+}
+
+</script>

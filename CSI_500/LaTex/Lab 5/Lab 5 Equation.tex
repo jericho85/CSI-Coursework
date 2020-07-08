@@ -1,0 +1,85 @@
+%  Equation Example
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+
+%opening
+\title{Lab 5 - LaTex Equation}
+\author{Jericho McLeod}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+In this lab, we use LaTex to do mathematical typesetting.
+\end{abstract}
+
+\section{Basics}
+In this section we demonstrate some mathematical typsetting features of LaTex.
+
+\subsection{In-line Expressions}
+Algebra relies on variables and expressions, such as $z = x +y$.
+
+\subsection{Super and Subscripts}
+Here are some superscript and subscript examples: \\
+$X^{3}, X^{Y^{2}} \\
+Y_{1}, Y_{Z_{i}} \\
+X^{i}_{j}, X_{j}^{i}$
+
+\subsection{Fraction Examples}
+Half of $N$ is $N/2$, but $N$ over $N+1$ is: \[\frac{n} {N+1}\]
+
+\subsection{Root Examples}
+The square root of 2 is $\sqrt{2}$, but the cube root of 2 is $\sqrt[3]{2}$.
+
+\subsection{Ellipsis Examples}
+Gauss's famous equation is" \[ \frac{N(N+1)}{2} = 1 + 2 + 3 + \cdots + N \] 
+A sum of terms is $x_{1}, x_{2}, ~\ldots~, x_{N}$.
+
+\subsection{Greek Letter Examples}
+Here are some upper case Greek letters: $A, B, \Gamma, \Delta, \Upsilon$.\\
+Here are some lower case Greek letters: $\alpha, \beta, \gamma, \delta, \upsilon$.\\
+
+\subsection{Operator Examples}
+Here are some mathematical operators: $5 \leq 8; 3 \geq 2; 6 \neq 8; 10 \ll 1000$.\\
+
+\subsection{Summation Example}
+Here is a summation operator:
+\[ \sum_{i=0}^{i=10} x_{i}^{2} = 385\]\\
+
+\subsection{Integral Example}
+Here is an integration operator:
+\[ \int_{-\infty}^{+\infty}\cos(x)dx=\sin(x)+C\]\\
+
+\subsection{Trig Function Examples}
+Here is a log operator:
+\[f(x) = k\log(x) \]\\
+Here are some trig functions:\\
+\hspace{10mm}
+$\sin \hspace{10mm}  \sec \hspace{10mm} \exp \hspace{10mm} \min \\
+\cos \hspace{10mm} \cot \hspace{10mm} \inf \hspace{10mm} \max \\
+\tan \hspace{10mm} \csc \hspace{10mm} \gcd \hspace{10mm} \lim $
+
+\subsection{Array Examples}
+Here is an array environment showing a 4x4 identity matrix $I$:
+\[
+	\begin{array}{cccc}
+		1 & 0 & 0 & 0 \\
+		0 & 1 & 0 & 0 \\
+		0 & 0 & 1 & 0 \\
+		0 & 0 & 0 & 1 \\
+		\end{array}
+\]
+\\
+\\
+Here is an example of an equation array, called an eqnarray environment:
+
+\begin{eqnarray}
+x & = & (y + 2) (y-3) \\
+x & = & y^{2} + (2y-3y)-6\\
+x & = & y^{2}-y-6
+\end{eqnarray}
+
+
+
+\end{document}
